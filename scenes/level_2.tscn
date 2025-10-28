@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dmx503e684ers"]
+[gd_scene load_steps=14 format=4 uid="uid://dmx503e684ers"]
 
 [ext_resource type="Texture2D" uid="uid://d1cu7qjb0k6qg" path="res://asset/sprite/Terrain (16x16).png" id="1_3bmlt"]
 [ext_resource type="PackedScene" uid="uid://bhfrs5hx2msgo" path="res://scenes/monster.tscn" id="2_eqxsl"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dljrmiajkf83h" path="res://scenes/chainsaw.tscn" id="4_wo48x"]
 [ext_resource type="PackedScene" uid="uid://cy6o75305p1o4" path="res://scenes/coin.tscn" id="5_b4j7a"]
 [ext_resource type="PackedScene" uid="uid://b6dc52erbxbu4" path="res://scenes/exit.tscn" id="7_y0kc7"]
+[ext_resource type="PackedScene" uid="uid://cpcmerqf7egdi" path="res://scenes/fruit.tscn" id="8_6cvei"]
 [ext_resource type="PackedScene" uid="uid://n78k2yhwq5uy" path="res://scenes/player.tscn" id="8_ne2mo"]
+[ext_resource type="FontFile" uid="uid://bbj38keywy7em" path="res://asset/fonts/PixelOperator8.ttf" id="9_que50"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jm1iu"]
 texture = ExtResource("1_3bmlt")
@@ -326,6 +328,9 @@ position = Vector2(-303, -380)
 [node name="Monster7" parent="Monsters" instance=ExtResource("2_eqxsl")]
 position = Vector2(289, -95)
 
+[node name="Monster8" parent="Monsters" instance=ExtResource("2_eqxsl")]
+position = Vector2(155, 287)
+
 [node name="Fires" type="Node2D" parent="."]
 position = Vector2(-313, 291)
 
@@ -347,7 +352,7 @@ position = Vector2(399, -697)
 position = Vector2(487, -181)
 
 [node name="Chainsaw2" parent="Chainsaws" instance=ExtResource("4_wo48x")]
-position = Vector2(141, 45)
+position = Vector2(160, 25)
 
 [node name="Chainsaw3" parent="Chainsaws" instance=ExtResource("4_wo48x")]
 position = Vector2(-176, 113)
@@ -397,7 +402,7 @@ position = Vector2(435, 296)
 position = Vector2(257, 290)
 
 [node name="Coin11" parent="Coins" instance=ExtResource("5_b4j7a")]
-position = Vector2(413, 157)
+position = Vector2(396, 163)
 
 [node name="Coin12" parent="Coins" instance=ExtResource("5_b4j7a")]
 position = Vector2(323, -96)
@@ -418,7 +423,7 @@ position = Vector2(-229, -389)
 position = Vector2(-60, -394)
 
 [node name="Coin18" parent="Coins" instance=ExtResource("5_b4j7a")]
-position = Vector2(-10, -265)
+position = Vector2(151, -299)
 
 [node name="Label" type="Label" parent="."]
 offset_left = -396.0
@@ -436,3 +441,14 @@ zoom = Vector2(2, 2)
 
 [node name="Exit" parent="." instance=ExtResource("7_y0kc7")]
 position = Vector2(-380, -404)
+
+[node name="Fruit" parent="." instance=ExtResource("8_6cvei")]
+position = Vector2(437, 163)
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -393.0
+offset_top = 216.0
+offset_right = 45.0
+offset_bottom = 238.0
+theme_override_fonts/font = ExtResource("9_que50")
+text = "find the fruit to reset your health!"
