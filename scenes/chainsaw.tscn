@@ -73,7 +73,7 @@ radius = 18.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_3bvso"]
 radius = 19.659603
 
-[node name="Chainsaw" type="Area2D"]
+[node name="Chainsaw" type="StaticBody2D"]
 collision_mask = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

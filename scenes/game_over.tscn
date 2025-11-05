@@ -156,10 +156,10 @@ text = "Game Over! "
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 518.0
-offset_top = 375.0
-offset_right = -416.5
-offset_bottom = -219.5
+offset_left = 387.0
+offset_top = 359.0
+offset_right = -547.5
+offset_bottom = -235.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_wqhvx")
@@ -173,10 +173,19 @@ autoplay = "default"
 frame_progress = 0.041290026
 
 [node name="scoreLabel" type="Label" parent="."]
-offset_left = 498.0
-offset_top = 322.0
-offset_right = 868.0
-offset_bottom = 374.0
+offset_left = 497.0
+offset_top = 321.0
+offset_right = 867.0
+offset_bottom = 373.0
 text = "You collected X out of Y coins!"
 
+[node name="retry" type="Button" parent="."]
+offset_left = 615.0
+offset_top = 359.0
+offset_right = 839.0
+offset_bottom = 413.0
+theme_override_fonts/font = ExtResource("2_wqhvx")
+text = "Retry"
+
 [connection signal="pressed" from="newGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]

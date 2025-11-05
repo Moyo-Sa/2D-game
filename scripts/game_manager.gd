@@ -4,6 +4,7 @@ extends Node
 #health logic
 var max_health = 100
 var current_health = 100: set = set_health
+var previous_scene_path: String = ""
 
 signal health_updated(new_health)
 

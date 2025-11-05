@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://co5ma8rlp7n4n" path="res://scenes/fire.tscn" id="3_b4j7a"]
 [ext_resource type="PackedScene" uid="uid://dljrmiajkf83h" path="res://scenes/chainsaw.tscn" id="4_wo48x"]
 [ext_resource type="PackedScene" uid="uid://cy6o75305p1o4" path="res://scenes/coin.tscn" id="5_b4j7a"]
-[ext_resource type="PackedScene" uid="uid://b6dc52erbxbu4" path="res://scenes/exit.tscn" id="7_y0kc7"]
 [ext_resource type="PackedScene" uid="uid://cpcmerqf7egdi" path="res://scenes/fruit.tscn" id="8_6cvei"]
 [ext_resource type="PackedScene" uid="uid://n78k2yhwq5uy" path="res://scenes/player.tscn" id="8_ne2mo"]
+[ext_resource type="PackedScene" uid="uid://buoh0fn6o04pi" path="res://scenes/l_2_checkpoint.tscn" id="9_6cvei"]
 [ext_resource type="FontFile" uid="uid://bbj38keywy7em" path="res://asset/fonts/PixelOperator8.ttf" id="9_que50"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jm1iu"]
@@ -352,7 +352,7 @@ position = Vector2(399, -697)
 position = Vector2(487, -181)
 
 [node name="Chainsaw2" parent="Chainsaws" instance=ExtResource("4_wo48x")]
-position = Vector2(160, 25)
+position = Vector2(169, 14)
 
 [node name="Chainsaw3" parent="Chainsaws" instance=ExtResource("4_wo48x")]
 position = Vector2(-176, 113)
@@ -425,22 +425,22 @@ position = Vector2(-60, -394)
 [node name="Coin18" parent="Coins" instance=ExtResource("5_b4j7a")]
 position = Vector2(151, -299)
 
+[node name="Coin19" parent="Coins" instance=ExtResource("5_b4j7a")]
+position = Vector2(-99, -185)
+
+[node name="Player" parent="." instance=ExtResource("8_ne2mo")]
+position = Vector2(-353, 191)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2, 2)
+
 [node name="Label" type="Label" parent="."]
 offset_left = -396.0
 offset_top = -448.0
 offset_right = -356.0
 offset_bottom = -425.0
-text = "Exit
+text = "Blinking Checkpoint
 "
-
-[node name="Player" parent="." instance=ExtResource("8_ne2mo")]
-position = Vector2(-351, 191)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(2, 2)
-
-[node name="Exit" parent="." instance=ExtResource("7_y0kc7")]
-position = Vector2(-380, -404)
 
 [node name="Fruit" parent="." instance=ExtResource("8_6cvei")]
 position = Vector2(437, 163)
@@ -452,3 +452,6 @@ offset_right = 45.0
 offset_bottom = 238.0
 theme_override_fonts/font = ExtResource("9_que50")
 text = "find the fruit to reset your health!"
+
+[node name="L2_Checkpoint" parent="." instance=ExtResource("9_6cvei")]
+position = Vector2(-383, -392)

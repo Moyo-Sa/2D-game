@@ -1,7 +1,7 @@
 extends Area2D
-#for platform to exit level
-@onready var timer = $Timer
-@onready var exit_s: AudioStreamPlayer2D = $"../ExitS"
+
+@onready var exit_s: AudioStreamPlayer2D = $ExitS
+
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -11,6 +11,5 @@ func _on_body_entered(body: Node2D) -> void:
 		Engine.time_scale = 0.5
 		await get_tree().create_timer(0.5).timeout
 		Engine.time_scale = 1.0
-		get_tree().change_scene_to_file("res://scenes/level_2.tscn")
-		
+		get_tree().change_scene_to_file("res://scenes/level_3.tscn")
 		

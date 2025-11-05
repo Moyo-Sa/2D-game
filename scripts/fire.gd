@@ -2,8 +2,10 @@ extends Area2D
 
 @onready var fire: AnimatedSprite2D = $AnimatedSprite2D
 @onready var killzone: Area2D = $Killzone
+@onready var killzone_collision: CollisionShape2D = $Killzone/CollisionShape2D
 
 
+var stove_on = false
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
@@ -16,9 +18,16 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func turn_on():
-	killzone.disable_mode = CollisionObject2D.DISABLE_MODE_REMOVE
-	
+	if not stove_on:
+		killzone_collision.disabled = false
+		stove_on = true
 
+func turn_off():
+	if stove_on:
+		killzone_collision.disabled = true
+		stove_on = false
 
-func _on_ready() -> void:
+func _ready() -> void:
+	killzone_collision.disabled = true
+	fire.play('off')
 	killzone.disable_mode = CollisionObject2D.DISABLE_MODE_MAKE_STATIC

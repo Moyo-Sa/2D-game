@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6dc52erbxbu4"]
+[gd_scene load_steps=8 format=3 uid="uid://b6dc52erbxbu4"]
 
 [ext_resource type="Texture2D" uid="uid://ce6fjfkqixyqe" path="res://asset/sprite/Brown Off.png" id="1_l0aq0"]
 [ext_resource type="Script" uid="uid://b4x4id35nvq3p" path="res://scripts/exit.gd" id="1_uyw7u"]
+[ext_resource type="AudioStream" uid="uid://67bkhqhc1rvo" path="res://asset/sounds/power_up.wav" id="3_l5n14"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uyw7u"]
 size = Vector2(32, 5)
@@ -40,5 +41,8 @@ script = ExtResource("1_uyw7u")
 [node name="exit" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_ka15t")
+
+[node name="ExitS" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_l5n14")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

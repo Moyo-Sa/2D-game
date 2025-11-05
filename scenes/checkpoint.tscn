@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://duhhhgvcs8esb"]
+[gd_scene load_steps=8 format=3 uid="uid://duhhhgvcs8esb"]
 
 [ext_resource type="Texture2D" uid="uid://dsugoc4l3uutb" path="res://asset/sprite/exit_jump (28x28).png" id="1_yyywg"]
 [ext_resource type="Script" uid="uid://8rq1miriyn3r" path="res://scripts/platform.gd" id="2_ywqth"]
+[ext_resource type="AudioStream" uid="uid://67bkhqhc1rvo" path="res://asset/sounds/power_up.wav" id="3_vsimk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yyywg"]
 size = Vector2(18, 7)
@@ -40,5 +41,8 @@ script = ExtResource("2_ywqth")
 [node name="PlatformTop" type="CollisionShape2D" parent="Platform"]
 position = Vector2(-1, -11.5)
 shape = SubResource("RectangleShape2D_ywqth")
+
+[node name="ExitS" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vsimk")
 
 [connection signal="body_entered" from="Platform" to="Platform" method="_on_body_entered"]

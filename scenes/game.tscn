@@ -275,7 +275,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_uwrxv")
 
 [node name="Game" type="Node2D"]
-position = Vector2(-3, 0)
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -295,7 +294,7 @@ tile_set = SubResource("TileSet_yqjtg")
 position = Vector2(-110, -25)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)
 limit_left = -10000163
 limit_top = -9999880
 limit_right = 9999837
@@ -428,7 +427,7 @@ text = "checkpoint
 [node name="Fires" type="Node2D" parent="."]
 
 [node name="Fire" parent="Fires" instance=ExtResource("6_p57ef")]
-position = Vector2(-53, -42)
+position = Vector2(-44, -41)
 
 [node name="Fire2" parent="Fires" instance=ExtResource("6_p57ef")]
 position = Vector2(208, 114)
